@@ -1,0 +1,157 @@
+WebDriver driver=new ChromeDriver(); 
+WebDriver firefox=new FireFoxDriver(); 
+We are using webdrivermanager to be able to get the chomedriver, geckoDriver and internetExplorer driver etc. 
+This is how to setup manually your driver
+System.set("webdriver.driver","locationOfYourDriver"); 
+Maven
+- To be able to manage our dependencies we are using maven build management tool. 
+- We need pom.xml file
+- We are using markup language. 
+- pom(project object model)
+Gradle
+Maven
+Selenium
+TestNG
+Cucumber
+Junit
+Docker Station
+Sql-DB
+Api
+Jenkins(CI/CD)
+Aws - Microsoft server
+TESTNG
+@Test
+@BeforeMethod
+@AfterMethod
+NOTE: These annotations will run before/after every test annotation
+@BeforeClass
+@AfterClass
+NOTE: It will run before/after every class 
+@BeforeTest
+@AfterTest
+NOTE: if you are executing multiple classes with multiple test annotations and if you want to navigate, validate, print the message one time before execution your classes, you can use the before/After test annotation. 
+@BeforeSuite
+@AfterSuite
+Note: It will run before/after everyannotation in your xml file.
+What is the Advantages of TESTNG? 
+- It has a lot of annotations
+- It has own html reporting
+- We can build framework on top of TestNG
+- We can achieve paralel testing using TestNG(Selenium Grid, SouceLabs)
+chrome and firefox
+10          10 = 20 
+4h          4h = 8h 
+if you do the paralel testing = 4h 
+============================================
+@Test - it will run with alphabetical order of method name. 
+How I can priority my test annotation?
+There is one keyword which is priority we need to use in test annotation as a parameter.
+How I can disable the test annotation? 
+There is one keyword which is enabled will help us to disable to test annotation. 
+if the value of enabled is true, it will run your test cases. If the value of enables is false, it will not run your test cases.
+NOTE: There is another parameter is alwaysRun. If the value is true it will run the test annotation always. 
+XML file
+-- is markup language. 
+-- we can create xml file in testng
+-- To be able run multiple classes, tests and suites in one click. 
+ <class name="AmazonPrice"></class>
+            <class name="TestNGPractice.AnnotationPractice"></class>
+NOTE: in xml file your class name needs to be location of your java file. The location will start after java folder. 
+Suite in xml is the defining all your test suites under one tag. 
+WebDriver driver=new ChromeDriver(); 
+WebDriver firefox=new FireFoxDriver(); 
+We are using webdrivermanager to be able to get the chomedriver, geckoDriver and internetExplorer driver etc. 
+This is how to setup manually your driver
+System.set("webdriver.driver","locationOfYourDriver"); 
+Maven
+- To be able to manage our dependencies we are using maven build management tool. 
+- We need pom.xml file
+- We are using markup language. 
+- pom(project object model)
+Gradle
+Maven
+Selenium
+TestNG
+Cucumber
+Junit
+Docker Station
+Sql-DB
+Api
+Jenkins(CI/CD)
+Aws - Microsoft server
+log4j
+TESTNG
+@Test
+@BeforeMethod
+@AfterMethod
+NOTE: These annotations will run before/after every test annotation
+@BeforeClass
+@AfterClass
+NOTE: It will run before/after every class 
+@BeforeTest
+@AfterTest
+NOTE: if you are executing multiple classes with multiple test annotations and if you want to navigate, validate, print the message one time before execution your classes, you can use the before/After test annotation. 
+@BeforeSuite
+@AfterSuite
+Note: It will run before/after everyannotation in your xml file.
+What is the Advantages of TESTNG? 
+- It has a lot of annotations
+- It has own html reporting
+- We can build framework on top of TestNG
+- We can achieve paralel testing using TestNG(Selenium Grid, SouceLabs)
+chrome and firefox
+10          10 = 20 
+4h          4h = 8h 
+if you do the paralel testing = 4h 
+============================================
+@Test - it will run with alphabetical order of method name. 
+How I can priority my test annotation?
+There is one keyword which is priority we need to use in test annotation as a parameter.
+How I can disable the test annotation? 
+There is one keyword which is enabled will help us to disable to test annotation. 
+if the value of enabled is true, it will run your test cases. If the value of enables is false, it will not run your test cases.
+NOTE: There is another parameter is alwaysRun. If the value is true it will run the test annotation always. 
+XML file
+-- is markup language. 
+-- we can create xml file in testng
+-- To be able run multiple classes, tests and suites in one click. 
+ <class name="AmazonPrice"></class>
+            <class name="TestNGPractice.AnnotationPractice"></class>
+NOTE: in xml file your class name needs to be location of your java file. The location will start after java folder. 
+Suite in xml is the defining all your test suites under one tag. 
+Create new xml file to be able run the MouseActionPractice class. 
+suite
+test
+classes
+class
+In TestNG we have one parameter annotation to be able to give the values from xml file we can use this annotation. 
+Where is coming my driver? 
+@Test
+{
+    
+    driver.get("url"); 
+}
+TestClass --> TestBase --> Driver 
+TestBase
+setUpDriver(){
+    driver=Driver.getDriver(); 
+}
+Parallel Execution Using TestNG
+- First You need to have one driver class to setup driver from one place. 
+- You need to use parameter annotation
+- paralel attribute in xml file
+- thread-count attribute in xml file
+==========================================
+Driver.getDriver("chrome").getTitle; 
+Driver.getDriver("chrome").getCurrentUrl;
+Driver.getDriver("chrome").navigate().To()
+Driver.getDriver("chrome").get("url"); 
+Driver.getDriver("chrome").navigate().back/forward/refresh 
+where I should store the webelements?
+- page class
+- I need constructor with PageFactory class to initElement(driver,this); 
+- I need to use the @FindBy annotation(coming from the selenium)
+- Create the object from page class in test class
+- Using the page object call the webelement
+Page Object Model
+Every page goes to the one class. Inside this class we are storing our webelement using @FindBy annotation.
